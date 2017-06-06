@@ -1,4 +1,4 @@
-package com.bbxmstudios.news;
+package <%= appPackage %>;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
