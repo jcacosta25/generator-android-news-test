@@ -52,7 +52,7 @@ module.exports = generator.Base.extend({
     var packageDir = this.props.appPackage.replace(/\./g, '/');
 
     mkdirp('app');
-    //mkdirp('app/src/main/assets');
+    // Amkdirp('app/src/main/assets');
     mkdirp('app/src/main/java/' + packageDir);
     mkdirp('app/src/androidTest/java/' + packageDir);
     mkdirp('app/src/commonTest/java/' + packageDir);
@@ -67,23 +67,24 @@ module.exports = generator.Base.extend({
     this.copy('gradlew.bat', 'gradlew.bat');
     this.copy('settings.gradle', 'settings.gradle');
     this.copy('app/.gitignore', 'app/.gitignore');
-    //this.copy('app/dependencies.gradle', 'app/dependencies.gradle');
+    // Athis.copy('app/dependencies.gradle', 'app/dependencies.gradle');
     this.copy('app/proguard-rules.pro', 'app/proguard-rules.pro');
 
     this.directory('gradle', 'gradle');
-    //this.directory('config', 'config');
-    //this.directory('app/src/main/assets', 'app/src/main/assets');
+    this.directory('app/libs','app/libs');
+    // Athis.directory('config', 'config');
+    // this.directory('app/src/main/assets', 'app/src/main/assets');
     this.directory('app/src/main/res', 'app/src/main/res', this, {});
 
     this.template('app/build.gradle', 'app/build.gradle');
     this.template('app/src/androidTest/java/com/bbxmstudios/news', 'app/src/androidTest/java/' + packageDir, this, {});
-    this.template('app/src/commonTest/java/com/bbxmstudios/news', 'app/src/commonTest/java/' + packageDir, this, {});
-    this.template('app/src/debug/AndroidManifest.xml', 'app/src/debug/AndroidManifest.xml');
-    this.template('app/src/debug/res', 'app/src/debug/res', this, {});
+    // Athis.template('app/src/commonTest/java/com/bbxmstudios/news', 'app/src/commonTest/java/' + packageDir, this, {});
+    // this.template('app/src/debug/AndroidManifest.xml', 'app/src/debug/AndroidManifest.xml');
+    // this.template('app/src/debug/res', 'app/src/debug/res', this, {});
     this.template('app/src/main/AndroidManifest.xml', 'app/src/main/AndroidManifest.xml');
     this.template('app/src/main/java/com/bbxmstudios/news', 'app/src/main/java/' + packageDir, this, {});
     this.template('app/src/main/res/layout', 'app/src/main/res/layout', this, {});
-    this.template('app/src/release/res', 'app/src/release/res', this, {});
+    // Athis.template('app/src/release/res', 'app/src/release/res', this, {});
     this.template('app/src/test/java/com/bbxmstudios/news', 'app/src/test/java/' + packageDir, this, {});
   }
 });
