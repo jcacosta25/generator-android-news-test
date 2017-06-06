@@ -60,7 +60,7 @@ module.exports = generator.Base.extend({
     mkdirp('app/src/release');
     mkdirp('app/src/test/java/' + packageDir);
 
-    this.copy('gitignore', '.gitignore');
+    this.copy('.gitignore', '.gitignore');
     this.copy('build.gradle', 'build.gradle');
     this.copy('gradle.properties', 'gradle.properties');
     this.copy('gradlew', 'gradlew');
